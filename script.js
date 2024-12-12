@@ -1,6 +1,6 @@
 let myKey = "44be5cc3c15e4a3c98354732241012";
 let aqi = "yes";
-let BASE_URL = "https://api.weatherapi.com/v1/current.json";
+let BASE_URL = "http://api.weatherapi.com/v1/current.json";
 let t = "&nbsp;&nbsp;";
 // let sampleUrl = `${BASE_URL}?key=${myKey}&q=${cityName}&aqi=${yes/no}`;
 let dataBox = document.querySelectorAll(".dataBox");
@@ -20,45 +20,17 @@ let active = 2;
 // }
 
 async function getData() {
-  let url = `https://api.weatherapi.com/v1/current.json?key=44be5cc3c15e4a3c98354732241012&q=Bhagalpur&aqi=yes`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=44be5cc3c15e4a3c98354732241012&q=Bhagalpur&aqi=yes`;
   let response = await fetch(url);
   let data = await response.json();
   console.log(data);
 }
 
-async function getTemp() {
-  let cityName = input.value;
-  let box = dataBox[0];
-  let icon = `<i class="fa-solid fa-temperature-three-quarters"></i>`;
-  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
-  let response = await fetch(url);
-  let data = await response.json();
-  let head = document.createElement("p");
-  let image = document.createElement("img");
-  let itext = document.createElement("p");
-  let foot = document.createElement("p");
-  let tempC = data.current.temp_c;
-  head.innerHTML = `${icon} Temperature :${data.current.temp_c}C / <br />${t} ${data.current.temp_f}F, feels like ${data.current.feelslike_c}`;
-  if (tempC <= 15) image.src = "./temperature/low.png";
-  else if (tempC <= 35) image.src = "./temperature/medium.png";
-  else image.src = "./temperature/high.png";
-  itext.innerText = `Weather is ${data.current.condition.text}, with a UV index of ${data.current.uv} and pressure of ${data.current.pressure_in} in.`;
-  foot.innerHTML = `last-updated: ${data.current.last_updated} <br /> lat: ${data.location.lat}, long: ${data.location.lon}<br />Region: ${data.location.name}, ${data.location.region} <br />country: ${data.location.country}`;
-  if (box.querySelector(".head p")) box.querySelector(".head p").remove();
-  if (box.querySelector(".image img")) box.querySelector(".image img").remove();
-  if (box.querySelector(".image p")) box.querySelector(".image p").remove();
-  if (box.querySelector(".foot p")) box.querySelector(".foot p").remove();
-  box.querySelector(".head").append(head);
-  box.querySelector(".image").append(image);
-  box.querySelector(".image").append(itext);
-  box.querySelector(".foot").append(foot);
-}
-
 async function getRain() {
   let cityName = input.value;
-  let box = dataBox[1];
+  let box = dataBox[0];
   let icon = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
-  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
@@ -84,9 +56,9 @@ async function getRain() {
 
 async function getWind() {
   let cityName = input.value;
-  let box = dataBox[2];
+  let box = dataBox[1];
   let icon = `<i class="fa-solid fa-wind"></i>`;
-  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
@@ -109,11 +81,39 @@ async function getWind() {
   box.querySelector(".foot").append(foot);
 }
 
+async function getTemp() {
+  let cityName = input.value;
+  let box = dataBox[2];
+  let icon = `<i class="fa-solid fa-temperature-three-quarters"></i>`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let response = await fetch(url);
+  let data = await response.json();
+  let head = document.createElement("p");
+  let image = document.createElement("img");
+  let itext = document.createElement("p");
+  let foot = document.createElement("p");
+  let tempC = data.current.temp_c;
+  head.innerHTML = `${icon} Temperature :${data.current.temp_c}C / <br />${t} ${data.current.temp_f}F, feels like ${data.current.feelslike_c}`;
+  if (tempC <= 15) image.src = "./temperature/low.png";
+  else if (tempC <= 35) image.src = "./temperature/medium.png";
+  else image.src = "./temperature/high.png";
+  itext.innerText = `Weather is ${data.current.condition.text}, with a UV index of ${data.current.uv} and pressure of ${data.current.pressure_in} in.`;
+  foot.innerHTML = `last-updated: ${data.current.last_updated} <br /> lat: ${data.location.lat}, long: ${data.location.lon}<br />Region: ${data.location.name}, ${data.location.region} <br />country: ${data.location.country}`;
+  if (box.querySelector(".head p")) box.querySelector(".head p").remove();
+  if (box.querySelector(".image img")) box.querySelector(".image img").remove();
+  if (box.querySelector(".image p")) box.querySelector(".image p").remove();
+  if (box.querySelector(".foot p")) box.querySelector(".foot p").remove();
+  box.querySelector(".head").append(head);
+  box.querySelector(".image").append(image);
+  box.querySelector(".image").append(itext);
+  box.querySelector(".foot").append(foot);
+}
+
 async function getAir() {
   let cityName = input.value;
   let box = dataBox[3];
   let icon = `<i class="fa-brands fa-cloudversify"></i>`;
-  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
