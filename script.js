@@ -1,6 +1,6 @@
 let myKey = "44be5cc3c15e4a3c98354732241012";
 let aqi = "yes";
-let BASE_URL = "http://api.weatherapi.com/v1/current.json";
+let BASE_URL = "https://api.weatherapi.com/v1/current.json";
 let t = "&nbsp;&nbsp;";
 // let sampleUrl = `${BASE_URL}?key=${myKey}&q=${cityName}&aqi=${yes/no}`;
 let dataBox = document.querySelectorAll(".dataBox");
@@ -20,7 +20,7 @@ let active = 2;
 // }
 
 async function getData() {
-  let url = `http://api.weatherapi.com/v1/current.json?key=44be5cc3c15e4a3c98354732241012&q=Bhagalpur&aqi=yes`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=44be5cc3c15e4a3c98354732241012&q=Bhagalpur&aqi=yes`;
   let response = await fetch(url);
   let data = await response.json();
   console.log(data);
@@ -30,7 +30,7 @@ async function getTemp() {
   let cityName = input.value;
   let box = dataBox[0];
   let icon = `<i class="fa-solid fa-temperature-three-quarters"></i>`;
-  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
@@ -58,7 +58,7 @@ async function getRain() {
   let cityName = input.value;
   let box = dataBox[1];
   let icon = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
-  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
@@ -86,7 +86,7 @@ async function getWind() {
   let cityName = input.value;
   let box = dataBox[2];
   let icon = `<i class="fa-solid fa-wind"></i>`;
-  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
@@ -113,7 +113,7 @@ async function getAir() {
   let cityName = input.value;
   let box = dataBox[3];
   let icon = `<i class="fa-brands fa-cloudversify"></i>`;
-  let url = `http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${cityName}&aqi=${aqi}`;
   let response = await fetch(url);
   let data = await response.json();
   let head = document.createElement("p");
