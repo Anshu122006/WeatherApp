@@ -6,7 +6,9 @@ html {
   font-size: 2vmin;
 }
 body {
-  background-image: linear-gradient(70deg, #002855, #168aad);
+  background-image: url("bgi.jpg"); /*linear-gradient(70deg, #002855, #168aad);*/
+  background-size: cover;
+  background-repeat: repeat;
   min-height: 100vh;
   margin: 0;
   display: flexbox;
@@ -16,15 +18,19 @@ body {
 }
 
 header {
+  position: fixed;
   display: flex;
   height: 8vh;
   width: 100vw;
   padding: 1rem;
   justify-content: space-around;
-  background-image: linear-gradient(45deg, #001233, #023e7d);
+  background-image: linear-gradient(45deg, #181818, #393939);
   color: #fefcfb;
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
 #sun {
@@ -78,18 +84,33 @@ header .welcome {
   width: 100vw;
   height: 80vh;
   overflow: hidden;
+  margin-top: 7vh;
+  margin-bottom: 9vh;
 }
 .dataBox {
   position: absolute;
   text-align: justify;
-  background-color: #eaf5bc;
+  background-image: none;
   width: 25%;
   height: 80%;
   border-radius: 10px;
   padding: 20px;
   transition: 0.5s;
+  box-shadow: 0 0 1rem rgb(18, 18, 18);
   top: 10%;
   left: 37.5%;
+}
+.rainfall {
+  background-image: linear-gradient(0, #90e0ef, #1565c0);
+}
+.wind {
+  background-image: linear-gradient(0, #ccff33, #2b9348);
+}
+.temperature {
+  background-image: linear-gradient(0, #fdffb6, #f3722c);
+}
+.air-quality {
+  background-image: linear-gradient(0, #fae0e4, #ff5c8a);
 }
 #next,
 #prev {
@@ -108,7 +129,7 @@ header .welcome {
 #next {
   right: 3%;
 }
-.normal-data {
+/* .normal-data {
   display: grid;
   grid-template-columns: repeat(3, 43vmin);
   grid-template-rows: repeat(2, 55vmin);
@@ -116,8 +137,8 @@ header .welcome {
   margin-top: 7vh;
   margin-bottom: 9vh;
   row-gap: 10vmin;
-}
-/* .dataBox {
+} */
+/*.dataBox {
   text-align: left;
   background-color: #1283a2e0;
   border-radius: 2rem;
@@ -180,10 +201,10 @@ header .welcome {
 } */
 
 footer {
-  height: 15vh;
+  height: 17.5vh;
   width: 100vw;
   padding: 1rem;
-  background-image: linear-gradient(45deg, #001233, #023e7d);
+  background-image: linear-gradient(45deg, #181818, #393939);
   color: #fefcfb;
   text-align: center;
   padding: 1rem;
@@ -200,4 +221,69 @@ footer p a {
   margin: 0.5rem;
   color: #fefcfb;
   text-decoration: none;
+}
+@media (max-width: 600px) {
+  body {
+    background-image: url("bgi.jpg"); /*linear-gradient(70deg, #002855, #168aad);*/
+    background-size: contain;
+    background-repeat: repeat;
+  }
+
+  header {
+    height: 12vh;
+    flex-wrap: wrap;
+  }
+
+  #sun {
+    width: 12vmin;
+    height: 12vmin;
+  }
+  header .welcome {
+    position: relative;
+    width: 85vw;
+    top: 1.75rem;
+  }
+
+  .searchbar {
+    position: relative;
+    left: 21vw;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+  .searchbar p {
+    position: relative;
+    font-style: italic;
+    font-size: 1.4rem;
+    left: -4.5rem;
+    bottom: 0.75rem;
+  }
+  .searchbar input {
+    position: relative;
+    width: 80%;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  .searchbar img {
+    width: 5.5vmin;
+    height: 5.5vmin;
+  }
+
+  .dataBox {
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    left: 25%;
+  }
+
+  footer {
+    height: 12.5vh;
+    width: 100vw;
+  }
+  footer h3 {
+    font-size: 2.25rem;
+  }
+  footer p a {
+    font-size: 1.3rem;
+  }
 }
