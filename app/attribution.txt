@@ -1,9 +1,0 @@
-weather icon -> https://www.flaticon.com/authors/freepik
-search icon -> https://www.flaticon.com/authors/iconset.co
-sun icon -> https://www.flaticon.com/authors/stasy
-tempIcon -> https://www.flaticon.com/authors/nawicon, https://www.flaticon.com/authors/smashingstocks,
-            https://www.flaticon.com/authors/freepik
-rainfall -> https://www.flaticon.com/authors/smashingstocks, https://www.flaticon.com/authors/freepik
-wind -> https://www.flaticon.com/authors/mangsaabguru
-air -> https://www.flaticon.com/authors/paul-j, https://www.flaticon.com/authors/freepik, https://www.flaticon.com/authors/eucalyp,
-        https://www.flaticon.com/authors/culmbio
