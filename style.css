@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 2vmin;
+}
+body {
+  background-image: linear-gradient(70deg, #002855, #168aad);
+  min-height: 100vh;
+  margin: 0;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+header {
+  display: flex;
+  height: 8vh;
+  width: 100vw;
+  padding: 1rem;
+  justify-content: space-around;
+  background-image: linear-gradient(45deg, #001233, #023e7d);
+  color: #fefcfb;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+#sun {
+  width: 8vmin;
+  height: 8vmin;
+}
+header .welcome {
+  position: relative;
+  top: 1.2rem;
+}
+
+.searchbar {
+  position: relative;
+  right: 0.5rem;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+}
+.searchbar p {
+  position: relative;
+  font-style: italic;
+  font-size: 1.2rem;
+  left: -4rem;
+}
+.searchbar input {
+  position: relative;
+  width: 50%;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  bottom: 0.4rem;
+  color: lightslategray;
+  font-style: italic;
+  border: 1px solid gray;
+}
+#search-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  top: 0.5rem;
+}
+.searchbar img {
+  width: 4.75vmin;
+  height: 4.75vmin;
+}
+
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+}
+.dataBox {
+  position: absolute;
+  text-align: justify;
+  background-color: #eaf5bc;
+  width: 25%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  top: 10%;
+  left: 37.5%;
+}
+#next,
+#prev {
+  position: absolute;
+  background-color: transparent;
+  font-family: monospace;
+  font-size: 3.5vmin;
+  font-weight: bold;
+  top: 50%;
+  border: none;
+  color: antiquewhite;
+}
+#prev {
+  left: 3%;
+}
+#next {
+  right: 3%;
+}
+.normal-data {
+  display: grid;
+  grid-template-columns: repeat(3, 43vmin);
+  grid-template-rows: repeat(2, 55vmin);
+  justify-content: space-around;
+  margin-top: 7vh;
+  margin-bottom: 9vh;
+  row-gap: 10vmin;
+}
+/* .dataBox {
+  text-align: left;
+  background-color: #1283a2e0;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 1rem rgb(48, 48, 48);
+  font-size: 1.4rem;
+} */
+.dataBox .head {
+  width: 100%;
+  height: 20%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: monospace, Times, serif;
+}
+.dataBox .image {
+  position: relative;
+  display: flex;
+  left: -1.5rem;
+  width: 100%;
+  height: 35%;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-family: monospace, Times, serif;
+}
+
+.dataBox .image img {
+  margin-left: 1rem;
+  width: 50%;
+  height: 100%;
+}
+.dataBox .foot {
+  position: relative;
+  top: 2rem;
+  width: 100;
+  height: 20%;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-family: monospace, Times, serif;
+}
+.dataBox i {
+  position: relative;
+  font-size: 2rem;
+  top: 0.4rem;
+}
+.wind .foot {
+  margin-top: 2.5rem;
+}
+
+/* .mouseOver {
+  position: relative;
+  background-color: #1283a2c2;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 1rem rgb(48, 48, 48);
+  font-size: 2.5rem;
+  width: 41vmin;
+  height: 59vmin;
+  left: -1.25vw;
+  top: -3vh;
+} */
+
+footer {
+  height: 15vh;
+  width: 100vw;
+  padding: 1rem;
+  background-image: linear-gradient(45deg, #001233, #023e7d);
+  color: #fefcfb;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+footer h3 {
+  font-size: 1.5rem;
+}
+footer p a {
+  font-style: italic;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  margin: 0.5rem;
+  color: #fefcfb;
+  text-decoration: none;
+}
