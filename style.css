@@ -240,8 +240,9 @@ footer p a {
   }
   header .welcome {
     position: relative;
-    width: 85vw;
+    width: 87.5vw;
     top: 1.75rem;
+    font-size: 
   }
 
   .searchbar {
