@@ -7,3 +7,4 @@ rainfall -> https://www.flaticon.com/authors/smashingstocks, https://www.flatico
 wind -> https://www.flaticon.com/authors/mangsaabguru
 air -> https://www.flaticon.com/authors/paul-j, https://www.flaticon.com/authors/freepik, https://www.flaticon.com/authors/eucalyp,
         https://www.flaticon.com/authors/culmbio
+background-image -> https://www.freepik.com/author/juicy-fish
