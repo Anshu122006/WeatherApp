@@ -145,12 +145,12 @@ header .welcome {
   padding: 1.5rem;
   box-shadow: 0 0 1rem rgb(48, 48, 48);
   font-size: 1.4rem;
-} */
+} -> attempt for a different layout*/
 .dataBox .head {
   width: 100%;
   height: 20%;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: monospace, Times, serif;
 }
 .dataBox .image {
@@ -222,6 +222,7 @@ footer p a {
   color: #fefcfb;
   text-decoration: none;
 }
+
 @media (max-width: 600px) {
   body {
     background-image: url("bgi.jpg"); /*linear-gradient(70deg, #002855, #168aad);*/
@@ -242,7 +243,6 @@ footer p a {
     position: relative;
     width: 87.5vw;
     top: 1.75rem;
-    font-size: 
   }
 
   .searchbar {
