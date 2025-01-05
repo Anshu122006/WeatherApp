@@ -1,3 +1,4 @@
+api used -> waether api.com
 weather icon -> https://www.flaticon.com/authors/freepik
 search icon -> https://www.flaticon.com/authors/iconset.co
 sun icon -> https://www.flaticon.com/authors/stasy
